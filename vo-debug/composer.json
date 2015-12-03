@@ -1,5 +1,5 @@
 {
-    "name": "vo-debug",
+    "name": "pkoltermann/vo-debug",
     "require-dev": {
         "phpspec/phpspec": "~2.0",
         "twig/twig": "~1.0"
