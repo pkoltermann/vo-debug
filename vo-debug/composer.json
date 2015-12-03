@@ -1,0 +1,16 @@
+{
+    "name": "vo-debug",
+    "require-dev": {
+        "phpspec/phpspec": "~2.0",
+        "twig/twig": "~1.0"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src",
+            "VoDebug": "src"
+        }
+    }
+}
