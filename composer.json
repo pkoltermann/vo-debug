@@ -5,12 +5,13 @@
         "twig/twig": "~1.0"
     },
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "vo-debug/bin",
+        "vendor-dir": "vo-debug/vendor"
     },
     "autoload": {
         "psr-0": {
-            "": "src",
-            "VoDebug": "src"
+            "": "vo-debug/src",
+            "VoDebug": "vo-debug/src"
         }
     }
 }
