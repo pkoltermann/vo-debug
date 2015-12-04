@@ -33,6 +33,6 @@ class ArrayDumper implements Dumper
             $elements[] = sprintf("'%s' => %s", $key, $this->masterDumper->dump($value, $nestLevel));
         }
         
-        return "[\n\t" . implode(",\n\t", $elements) . "\n],\n";
+        return "[\n\t" . implode(",\n\t", preg_replace("/\n/", "\n\t", $elements)) . "\n],\n";
     }
 }

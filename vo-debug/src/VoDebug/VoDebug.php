@@ -18,7 +18,7 @@ class VoDebug implements Dumpers\Dumper
      *
      * @var int
      */
-    private $maxNestLevel;
+    private $maxNestLevel = 5;
     
     /**
      * @var ObjectDumper
@@ -68,10 +68,10 @@ class VoDebug implements Dumpers\Dumper
                 $result = $this->numberDumper->dump($subject);
                 break;
             case "array":
-                $result = $this->arrayDumper->dump($subject, $nestLevel);
+                $result = $this->arrayDumper->dump($subject, $nestLevel + 1);
                 break;
             case "object":
-                $result = $this->objectDumper->dump($subject, $nestLevel);
+                $result = $this->objectDumper->dump($subject, $nestLevel + 1);
                 break;
             case "boolean":
                 $result = sprintf("%s (boolean)", $subject ? "true" : "false");

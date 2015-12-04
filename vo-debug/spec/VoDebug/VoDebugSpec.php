@@ -39,7 +39,7 @@ class VoDebugSpec extends ObjectBehavior
     }
     private function testSingleNested($tested, $expected, $dumper)
     {
-        $dumper->dump($tested, 0)->willReturn($expected);
+        $dumper->dump($tested, 1)->willReturn($expected);
         $this->dump($tested)->shouldReturn($expected);
     }
 }
